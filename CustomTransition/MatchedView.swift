@@ -15,6 +15,7 @@ struct MatchedView: View {
     ZStack {
       if !show {
         VStack(alignment: .leading, spacing: 12) {
+          Spacer()
           Text("SwiftUI")
             .font(.largeTitle.weight(.bold))
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -29,28 +30,58 @@ struct MatchedView: View {
         .padding(20)
         .foregroundStyle(.white)
         .background(
-          Color.red.matchedGeometryEffect(id: "background", in: namespace)
+          Image("illustration")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .matchedGeometryEffect(id: "image", in: namespace)
         )
+        .background(
+          Image("background")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .matchedGeometryEffect(id: "background", in: namespace)
+        )
+        .mask(
+          RoundedRectangle(cornerRadius: 30, style: .continuous)
+            .matchedGeometryEffect(id: "mask", in: namespace)
+        )
+        .frame(height: 300)
         .padding(20)
       } else {
-        VStack(alignment: .leading, spacing: 12) {
-          Spacer()
-          Text("Build an iOS app for iOS15 with custom layouts, animations and ...")
-            .font(.footnote)
-            .matchedGeometryEffect(id: "￥￥text", in: namespace)
-          Text("20 sections - 3 hours ".uppercased())
-            .font(.footnote.weight(.semibold))
-            .matchedGeometryEffect(id: "subtitle", in: namespace)
-          Text("SwiftUI")
-            .font(.largeTitle.weight(.bold))
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .matchedGeometryEffect(id: "title", in: namespace)
-         }
-        .padding(20)
-        .foregroundStyle(.black)
-        .background(
-          Color.blue.matchedGeometryEffect(id: "background", in: namespace)
+        ScrollView {
+          VStack(alignment: .leading, spacing: 12) {
+            Spacer()
+            Text("Build an iOS app for iOS15 with custom layouts, animations and ...")
+              .font(.footnote)
+              .matchedGeometryEffect(id: "text", in: namespace)
+            Text("20 sections - 3 hours ".uppercased())
+              .font(.footnote.weight(.semibold))
+              .matchedGeometryEffect(id: "subtitle", in: namespace)
+            Text("SwiftUI")
+              .font(.largeTitle.weight(.bold))
+              .frame(maxWidth: .infinity, alignment: .leading)
+              .matchedGeometryEffect(id: "title", in: namespace)
+           }
+          .frame(height: 500)
+          .padding(20)
+          .foregroundStyle(.black)
+          .background(
+            Image("illustration")
+              .resizable()
+              .aspectRatio(contentMode: .fit)
+              .matchedGeometryEffect(id: "image", in: namespace)
+          )
+          .background(
+            Image("background")
+              .resizable()
+              .aspectRatio(contentMode: .fill)
+              .matchedGeometryEffect(id: "background", in: namespace)
+          )
+          .mask(
+            RoundedRectangle(cornerRadius: 30, style: .continuous)
+              .matchedGeometryEffect(id: "mask", in: namespace)
         )
+        }
       }
     }
     .onTapGesture {
