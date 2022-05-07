@@ -15,6 +15,7 @@
 		A26EADEC2824C06F00542A09 /* CourseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADEB2824C06F00542A09 /* CourseItem.swift */; };
 		A26EADEE2824C66000542A09 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADED2824C66000542A09 /* CourseView.swift */; };
 		A26EADF02824C8BA00542A09 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADEF2824C8BA00542A09 /* HomeView.swift */; };
+		A26EADF32826D4D800542A09 /* GradientSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADF22826D4D800542A09 /* GradientSampleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		A26EADEB2824C06F00542A09 /* CourseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseItem.swift; sourceTree = "<group>"; };
 		A26EADED2824C66000542A09 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		A26EADEF2824C8BA00542A09 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A26EADF22826D4D800542A09 /* GradientSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSampleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,12 @@
 			isa = PBXGroup;
 			children = (
 				A26EADDA281ED68200542A09 /* CustomTransitionApp.swift */,
-				A26EADDC281ED68200542A09 /* ContentView.swift */,
 				A26EADEF2824C8BA00542A09 /* HomeView.swift */,
 				A26EADEB2824C06F00542A09 /* CourseItem.swift */,
 				A26EADED2824C66000542A09 /* CourseView.swift */,
 				A26EADE8281EE1D300542A09 /* MatchedView.swift */,
+				A26EADDC281ED68200542A09 /* ContentView.swift */,
+				A26EADF22826D4D800542A09 /* GradientSampleView.swift */,
 				A26EADDE281ED68200542A09 /* Assets.xcassets */,
 				A26EADE0281ED68200542A09 /* Preview Content */,
 			);
@@ -152,6 +155,7 @@
 				A26EADDD281ED68200542A09 /* ContentView.swift in Sources */,
 				A26EADE9281EE1D300542A09 /* MatchedView.swift in Sources */,
 				A26EADEE2824C66000542A09 /* CourseView.swift in Sources */,
+				A26EADF32826D4D800542A09 /* GradientSampleView.swift in Sources */,
 				A26EADF02824C8BA00542A09 /* HomeView.swift in Sources */,
 				A26EADDB281ED68200542A09 /* CustomTransitionApp.swift in Sources */,
 				A26EADEC2824C06F00542A09 /* CourseItem.swift in Sources */,
