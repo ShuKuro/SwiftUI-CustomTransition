@@ -10,21 +10,20 @@ import SwiftUI
 struct ContentView: View {
   @State var showModal = false
   @Namespace var namespace
+  @State var material: Material = .ultraThinMaterial
 
   var body: some View {
     ZStack {
       LinearGradient(colors: [Color.red, Color.purple], startPoint: .topLeading, endPoint: .bottomTrailing)
         .ignoresSafeArea()
 
-      Button(action: {
-        withAnimation(.easeOut(duration: 0.2)) {
-          showModal.toggle()
-        }
-      }, label: {
-        Text("Show Glass Modal")
-          .font(.largeTitle)
-          .foregroundColor(.black)
-      })
+      VStack(spacing: 20) {
+        modalButton(material: .ultraThinMaterial)
+        modalButton(material: .thinMaterial)
+        modalButton(material: .regularMaterial)
+        modalButton(material: .thickMaterial)
+        modalButton(material: .ultraThickMaterial)
+      }
 
       if showModal {
         glassModal
@@ -32,31 +31,47 @@ struct ContentView: View {
     }
   }
 
+  func modalButton(material: Material) -> some View {
+    Button(action: {
+      withAnimation(.easeOut(duration: 0.2)) {
+        self.material = material
+        showModal.toggle()
+      }
+    }, label: {
+      Text("Show Glass Modal")
+        .font(.body)
+        .foregroundColor(.black)
+        .frame(width: 250, height: 50)
+        .background(Color.cyan.opacity(0.5))
+        .cornerRadius(20)
+    })
+  }
+
   var glassModal: some View {
     VStack{
-      Text("ultraThinMaterial")
-        .modalRow(material: .ultraThinMaterial)
-      Text("thinMaterial")
-        .modalRow(material: .thinMaterial)
-      Text("regularMaterial")
-        .modalRow(material: .regularMaterial)
-      Text("thickMaterial")
-        .modalRow(material: .thickMaterial)
-      Text("thickMaterial")
-        .modalRow(material: .ultraThickMaterial)
-
       Spacer()
-
+      Text("Material")
+        .font(.largeTitle)
+      Spacer()
       Button(action: {
         showModal.toggle()
+        self.material = material
       }, label: {
         Text("Close")
-          .font(.largeTitle)
+          .font(.title)
+          .foregroundColor(.black)
           .frame(width: 200, height: 50)
           .background(.regularMaterial)
           .cornerRadius(20)
       })
     }
+    .padding()
+    .foregroundStyle(.black)
+    .frame(width: UIScreen.main.bounds.width - 50, height: UIScreen.main.bounds.height - 300)
+    .background(material)
+    .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.white, lineWidth: 0.8))
+    .cornerRadius(50)
+    .shadow(color: .white, radius: 5)
   }
 }
 
@@ -77,7 +92,7 @@ struct ModalRowModifier: ViewModifier {
       .font(.title3)
       .padding(30)
       .foregroundStyle(.black)
-      .frame(width: UIScreen.main.bounds.width - 50, height: 30)
+      .frame(width: UIScreen.main.bounds.width - 50, height: 50)
       .background(material)
       .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.white, lineWidth: 0.8))
       .cornerRadius(50)
