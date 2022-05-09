@@ -42,7 +42,7 @@ struct ContentView: View {
         .font(.body)
         .foregroundColor(.black)
         .frame(width: 250, height: 50)
-        .background(Color.cyan.opacity(0.5))
+        .background(Color.cyan)
         .cornerRadius(20)
     })
   }
@@ -59,14 +59,12 @@ struct ContentView: View {
       }, label: {
         Text("Close")
           .font(.title)
-          .foregroundColor(.black)
           .frame(width: 200, height: 50)
           .background(.regularMaterial)
           .cornerRadius(20)
       })
     }
     .padding()
-    .foregroundStyle(.black)
     .frame(width: UIScreen.main.bounds.width - 50, height: UIScreen.main.bounds.height - 300)
     .background(material)
     .overlay(RoundedRectangle(cornerRadius: 50).stroke(Color.white, lineWidth: 0.8))
@@ -77,7 +75,12 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
+    Group {
+      ContentView()
+        .preferredColorScheme(.light)
+      ContentView()
+        .preferredColorScheme(.dark)
+    }
   }
 }
 
