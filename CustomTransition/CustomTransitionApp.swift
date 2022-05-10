@@ -11,8 +11,8 @@ import SwiftUI
 struct CustomTransitionApp: App {
     var body: some Scene {
         WindowGroup {
-//            HomeView()
-          ContentView()
+            HomeView()
+//          ContentView()
         }
     }
 }

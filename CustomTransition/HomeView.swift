@@ -17,10 +17,6 @@ struct HomeView: View {
       Color("background").ignoresSafeArea()
 
       ScrollView {
-//        scrollDetection
-
-//        featured
-
         Text("Courses".uppercased())
           .font(.footnote.weight(.semibold))
           .foregroundColor(.secondary)
@@ -41,9 +37,6 @@ struct HomeView: View {
       .safeAreaInset(edge: .top, content: {
         Color.clear.frame(height: 70)
       })
-//      .overlay(
-//        NavigationBar(title: "Featured", hasScrolled: $hasScrolled)
-//      )
 
       if show {
         CourseView(namespace: namespace, show: $show)
