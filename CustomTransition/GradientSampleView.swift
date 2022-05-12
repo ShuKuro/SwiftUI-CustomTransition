@@ -14,8 +14,10 @@ struct GradientSampleView: View {
                        startPoint: .topLeading,
                        endPoint: .bottomTrailing)
           .ignoresSafeArea()
+
         VStack{
-          Text("aaa")
+          Text("Material")
+            .font(.largeTitle)
         }
         .foregroundStyle(.black)
         .frame(width: UIScreen.main.bounds.width - 50, height: UIScreen.main.bounds.height - 300)
