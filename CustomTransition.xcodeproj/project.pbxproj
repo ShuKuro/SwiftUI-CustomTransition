@@ -16,6 +16,8 @@
 		A26EADEE2824C66000542A09 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADED2824C66000542A09 /* CourseView.swift */; };
 		A26EADF02824C8BA00542A09 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADEF2824C8BA00542A09 /* HomeView.swift */; };
 		A26EADF32826D4D800542A09 /* GradientSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADF22826D4D800542A09 /* GradientSampleView.swift */; };
+		A26EADF8282D0B0A00542A09 /* CustomBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADF7282D0B0A00542A09 /* CustomBottomSheet.swift */; };
+		A26EADFA282D0B6C00542A09 /* CustomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADF9282D0B6C00542A09 /* CustomSheet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		A26EADED2824C66000542A09 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		A26EADEF2824C8BA00542A09 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A26EADF22826D4D800542A09 /* GradientSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSampleView.swift; sourceTree = "<group>"; };
+		A26EADF7282D0B0A00542A09 /* CustomBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBottomSheet.swift; sourceTree = "<group>"; };
+		A26EADF9282D0B6C00542A09 /* CustomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				A26EADED2824C66000542A09 /* CourseView.swift */,
 				A26EADE8281EE1D300542A09 /* MatchedView.swift */,
 				A26EADDC281ED68200542A09 /* ContentView.swift */,
+				A26EADF9282D0B6C00542A09 /* CustomSheet.swift */,
+				A26EADF7282D0B0A00542A09 /* CustomBottomSheet.swift */,
 				A26EADF22826D4D800542A09 /* GradientSampleView.swift */,
 				A26EADDE281ED68200542A09 /* Assets.xcassets */,
 				A26EADE0281ED68200542A09 /* Preview Content */,
@@ -154,7 +160,9 @@
 			files = (
 				A26EADDD281ED68200542A09 /* ContentView.swift in Sources */,
 				A26EADE9281EE1D300542A09 /* MatchedView.swift in Sources */,
+				A26EADFA282D0B6C00542A09 /* CustomSheet.swift in Sources */,
 				A26EADEE2824C66000542A09 /* CourseView.swift in Sources */,
+				A26EADF8282D0B0A00542A09 /* CustomBottomSheet.swift in Sources */,
 				A26EADF32826D4D800542A09 /* GradientSampleView.swift in Sources */,
 				A26EADF02824C8BA00542A09 /* HomeView.swift in Sources */,
 				A26EADDB281ED68200542A09 /* CustomTransitionApp.swift in Sources */,
