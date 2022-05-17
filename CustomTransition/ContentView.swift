@@ -12,6 +12,9 @@ struct ContentView: View {
   @Namespace var namespace
   @State var material: Material = .ultraThinMaterial
 
+  @State private var currentHeight: CGFloat = 0.0
+  @State private var movingOffset: CGFloat = 0.0
+
   var body: some View {
     ZStack {
       LinearGradient(colors: [Color.red, Color.purple], startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -25,6 +28,8 @@ struct ContentView: View {
         modalButton(material: .ultraThickMaterial)
       }
 
+      CustomBottomSheet(currentHeight: $currentHeight, movingOffset: $movingOffset)
+      
       if showModal {
         glassModal
       }
@@ -83,6 +88,8 @@ struct ContentView_Previews: PreviewProvider {
     }
   }
 }
+
+// MARK: -
 
 struct ModalRowModifier: ViewModifier {
   var material: Material

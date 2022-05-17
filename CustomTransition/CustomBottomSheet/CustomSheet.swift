@@ -32,8 +32,21 @@ struct CustomSheet<Content>: View where Content: View {
             }
           })
           .onEnded( { drag in
+            withAnimation(.spring(dampingFraction: 0.7)) {
+              if self.movingOffset > -50 {
+                self.movingOffset = 0.0
+                self.onDragEnd(.up)
+
+                if drag.translation.height > 80 {
+                  self.movingOffset = self.smallHeight
+                  self.onDragEnd(.down)
+                }
+                self.currentHeight = self.movingOffset
+              }
+            }
           })
       )
+      .edgesIgnoringSafeArea(.all)
   }
 }
 

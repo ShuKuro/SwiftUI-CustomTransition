@@ -10,14 +10,15 @@ import SwiftUI
 struct CustomBottomSheet: View {
   @Binding var currentHeight: CGFloat
   @Binding var movingOffset: CGFloat
+  
 
     var body: some View {
       CustomSheet(currentHeight: $currentHeight, movingOffset: $movingOffset, smallHeight: 300, onDragEnd: {position in
         // DO somethings on drag end
       }) {
         ZStack(alignment: .top) {
-          Text("Sheet")
-            .font(.largeTitle)
+          SheetBodyView(movingOffset: $movingOffset)
+
           ToolbarView(currentHeight: self.$currentHeight, movingOffset: self.$movingOffset)
         }
         .background(Color.white)

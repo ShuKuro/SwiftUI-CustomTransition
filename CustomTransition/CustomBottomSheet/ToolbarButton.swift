@@ -17,6 +17,7 @@ struct ToolbarButton: View {
     let selectedColor = "orange"
 
     return Button(action: {
+      self.action()
     }) {
       HStack {
         Image(systemName: self.icon)

@@ -12,22 +12,11 @@ struct ToolbarView: View {
   @Binding var movingOffset: CGFloat
 
   var body: some View {
-    HStack {
-      ToolbarButton(icon: "triangle", isSelected: true) {}
-
-      Spacer()
-
-      ToolbarButton(icon: "plus", isPlus: true) {
-        withAnimation(.spring(dampingFraction: 0.7)) {
-          self.currentHeight = 0.0
-          self.movingOffset = 0.0
-        }
+    ToolbarButton(icon: "plus", isPlus: true) {
+      withAnimation(.spring(dampingFraction: 0.7)) {
+        self.currentHeight = 0.0
+        self.movingOffset = 0.0
       }
-      .shadow(color: Color("green").opacity(0.5), radius: 5, x: 0.0, y: 10)
-
-      Spacer()
-
-      ToolbarButton( icon: "bubble.left", isSelected: false) {}
     }
     .padding(.top, 15)
     .padding(.horizontal, 30)

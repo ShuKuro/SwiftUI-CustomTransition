@@ -21,6 +21,7 @@
 		A26EADFE282FA10C00542A09 /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADFD282FA10C00542A09 /* RoundedShape.swift */; };
 		A26EAE00282FA15900542A09 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADFF282FA15900542A09 /* ToolbarView.swift */; };
 		A26EAE02282FA4A300542A09 /* ToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EAE01282FA4A300542A09 /* ToolbarButton.swift */; };
+		A26EAE04282FFECD00542A09 /* SheetBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EAE03282FFECD00542A09 /* SheetBodyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		A26EADFD282FA10C00542A09 /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 		A26EADFF282FA15900542A09 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 		A26EAE01282FA4A300542A09 /* ToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButton.swift; sourceTree = "<group>"; };
+		A26EAE03282FFECD00542A09 /* SheetBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBodyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				A26EADF9282D0B6C00542A09 /* CustomSheet.swift */,
 				A26EADF7282D0B0A00542A09 /* CustomBottomSheet.swift */,
+				A26EAE03282FFECD00542A09 /* SheetBodyView.swift */,
 				A26EADFF282FA15900542A09 /* ToolbarView.swift */,
 				A26EAE01282FA4A300542A09 /* ToolbarButton.swift */,
 			);
@@ -188,6 +191,7 @@
 				A26EADE9281EE1D300542A09 /* MatchedView.swift in Sources */,
 				A26EADFA282D0B6C00542A09 /* CustomSheet.swift in Sources */,
 				A26EADEE2824C66000542A09 /* CourseView.swift in Sources */,
+				A26EAE04282FFECD00542A09 /* SheetBodyView.swift in Sources */,
 				A26EAE02282FA4A300542A09 /* ToolbarButton.swift in Sources */,
 				A26EADF8282D0B0A00542A09 /* CustomBottomSheet.swift in Sources */,
 				A26EADFE282FA10C00542A09 /* RoundedShape.swift in Sources */,
