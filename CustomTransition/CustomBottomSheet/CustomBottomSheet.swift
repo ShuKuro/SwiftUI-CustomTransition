@@ -21,7 +21,11 @@ struct CustomBottomSheet: View {
 
           ToolbarView(currentHeight: self.$currentHeight, movingOffset: self.$movingOffset)
         }
-        .background(backgroundColor)
+        .background(
+          Rectangle()
+            .fill(.thinMaterial)
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        )
         .clipShape(RoundedShape())
         .shadow(color: Color.gray.opacity(0.2), radius: 6, x: 0.0, y: -5)
       }

@@ -35,7 +35,7 @@ struct SheetBodyView: View {
       }
 
     }
-    .padding(.bottom, isXorAbove ? 60 : 50 )
+    .padding(.bottom, isXorAbove ? 60 : 50)
     .padding(.top, 15)
     .offset(y: movingOffset)
   }
