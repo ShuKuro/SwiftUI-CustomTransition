@@ -21,7 +21,7 @@ struct ToolbarView: View {
     .padding(.top, 15)
     .padding(.horizontal, 30)
     .frame(minWidth: 0.0, maxWidth: .infinity)
-    .offset(y: self.currentHeight == 0  ? -100 : 0)
+    .offset(y: self.currentHeight == 0 ? -100 : 0)
   }
 }
 

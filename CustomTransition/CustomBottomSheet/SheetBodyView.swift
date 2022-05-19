@@ -10,8 +10,7 @@ import SwiftUI
 struct SheetBodyView: View {
   @Binding var movingOffset: CGFloat
   let screenSize = UIScreen.main.bounds.size
-  @State private var textTitle = ""
-
+  
   var body: some View {
     let phoneRatio = String(format: "%.3f", screenSize.width / screenSize.height)
     let refRatio = String(format: "%.3f",  9.0 / 16.0)
@@ -24,7 +23,7 @@ struct SheetBodyView: View {
         .foregroundColor(.gray.opacity(0.5))
 
       VStack {
-        Text("ShhetBody")
+        Text("SheetBody")
           .font(.largeTitle)
         Divider().padding(.horizontal, 50)
       }

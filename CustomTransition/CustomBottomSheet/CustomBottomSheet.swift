@@ -10,7 +10,7 @@ import SwiftUI
 struct CustomBottomSheet: View {
   @Binding var currentHeight: CGFloat
   @Binding var movingOffset: CGFloat
-  
+  @State var backgroundColor = Color.white
 
     var body: some View {
       CustomSheet(currentHeight: $currentHeight, movingOffset: $movingOffset, smallHeight: 300, onDragEnd: {position in
@@ -21,7 +21,7 @@ struct CustomBottomSheet: View {
 
           ToolbarView(currentHeight: self.$currentHeight, movingOffset: self.$movingOffset)
         }
-        .background(Color.white)
+        .background(backgroundColor)
         .clipShape(RoundedShape())
         .shadow(color: Color.gray.opacity(0.2), radius: 6, x: 0.0, y: -5)
       }
