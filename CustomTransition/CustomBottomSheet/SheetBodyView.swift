@@ -25,16 +25,10 @@ struct SheetBodyView: View {
       VStack {
         Text("SheetBody")
           .font(.largeTitle)
-        Divider().padding(.horizontal, 50)
       }
-
-      VStack(spacing: 15){
-        customButton
-        customButton
-        customButton
-      }
-
+      Spacer()
     }
+    .frame(height: 310)
     .padding(.bottom, isXorAbove ? 60 : 50)
     .padding(.top, 15)
     .offset(y: movingOffset)
