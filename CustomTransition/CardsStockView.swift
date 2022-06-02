@@ -7,51 +7,63 @@
 
 import SwiftUI
 
+let screen = UIScreen.main.bounds
+
 struct CardsStockView: View {
-  var title = "Card Name"
-  var cardNumber = "1234 5678 9012 3456"
-  var name = "John Smith"
-  var limit = "07/24"
-  var background = Color.black
+  @State var show = false
+  @State var viewState = CGSize.zero
 
   var body: some View {
-    VStack() {
-      HStack {
-        Text(title)
-          .font(.largeTitle)
-          .fontWeight(.bold)
-          .foregroundColor(.white)
-        Spacer()
-      }
-      .padding(20)
-      .padding(.bottom, 20)
+    ZStack() {
+      CardView(title: "UI Design", cardNumber: "0000 0000 0000 0000 ", name: "Certificates", limit: "07/24", background: .pink)
+        .frame(width: 340.0, height: 220)
+        .shadow(radius: 20)
+        .offset(x: 0, y: show ? -400 : -40)
+        .scaleEffect(0.85)
+        .rotationEffect(Angle(degrees: show ? 15 : 0))
+        .blendMode(.hardLight)
+        .offset(x: viewState.width, y: viewState.height)
+        .animation(.easeInOut(duration: 0.3))
 
-      Text(cardNumber)
-        .font(.title)
-        .foregroundColor(.white)
-        .padding(10)
+      CardView(title: "UI Design", cardNumber: "0000 0000 0000 0000 ", name: "Certificates", limit: "07/24", background: .purple)
+        .frame(width: 340.0, height: 220)
+        .shadow(radius: 20)
+        .offset(x: 0, y: show ? -200 : -20)
+        .scaleEffect(0.90)
+        .rotationEffect(Angle(degrees: show ? 10 : 0))
+//        .blendMode(.hardLight)
+        .offset(x: viewState.width, y: viewState.height)
+        .animation(.easeInOut(duration: 0.2))
 
-      Text(limit)
-        .font(.title2)
-        .foregroundColor(.white)
-
-      HStack {
-        Text(name)
-          .font(.title2)
-          .foregroundColor(.white)
-        Spacer()
-      }
-      .padding(20)
-
+      CardView(title: "UI Design", cardNumber: "0000 0000 0000 0000 ", name: "Certificates", limit: "07/24", background: .cyan)
+        .frame(width: 340.0, height: 220)
+        .shadow(radius: 20)
+        .scaleEffect(0.95)
+        .rotationEffect(Angle(degrees: show ? 5 : 0))
+        .blendMode(.hardLight)
+        .offset(x: viewState.width, y: viewState.height)
+        .animation(.spring())
+        .onTapGesture {
+          self.show.toggle()
+        }
+        .gesture(
+          DragGesture()
+            .onChanged { value in
+              self.viewState = value.translation
+              self.show = true
+            }
+            .onEnded { value in
+              self.viewState = .zero
+              self.show = false
+            }
+        )
     }
-    .background(background)
-    .cornerRadius(10)
+    .frame(minWidth: 0, maxWidth: 712, minHeight: 0, maxHeight: screen.height)
   }
 }
 
 struct CardsStockView_Previews: PreviewProvider {
   static var previews: some View {
     CardsStockView()
-      .previewLayout(.sizeThatFits)
   }
 }
