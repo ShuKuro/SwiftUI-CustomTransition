@@ -41,7 +41,7 @@ struct CardView: View {
           .foregroundColor(.white)
         Spacer()
       }
-      .padding(20)
+      .padding([.leading, .bottom], 20)
 
     }
     .background(background)
