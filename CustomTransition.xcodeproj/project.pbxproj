@@ -22,6 +22,8 @@
 		A26EAE00282FA15900542A09 /* ToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADFF282FA15900542A09 /* ToolbarView.swift */; };
 		A26EAE02282FA4A300542A09 /* ToolbarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EAE01282FA4A300542A09 /* ToolbarButton.swift */; };
 		A26EAE04282FFECD00542A09 /* SheetBodyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EAE03282FFECD00542A09 /* SheetBodyView.swift */; };
+		A28B3AAB2849023000F012FF /* CardsStockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B3AAA2849023000F012FF /* CardsStockView.swift */; };
+		A28B3AAD284904F300F012FF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A28B3AAC284904F300F012FF /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		A26EADFF282FA15900542A09 /* ToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarView.swift; sourceTree = "<group>"; };
 		A26EAE01282FA4A300542A09 /* ToolbarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarButton.swift; sourceTree = "<group>"; };
 		A26EAE03282FFECD00542A09 /* SheetBodyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetBodyView.swift; sourceTree = "<group>"; };
+		A28B3AAA2849023000F012FF /* CardsStockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStockView.swift; sourceTree = "<group>"; };
+		A28B3AAC284904F300F012FF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				A26EADED2824C66000542A09 /* CourseView.swift */,
 				A26EADE8281EE1D300542A09 /* MatchedView.swift */,
 				A26EADDC281ED68200542A09 /* ContentView.swift */,
+				A28B3AAA2849023000F012FF /* CardsStockView.swift */,
+				A28B3AAC284904F300F012FF /* CardView.swift */,
 				A26EADFB282F7BC800542A09 /* CustomBottomSheet */,
 				A26EADF22826D4D800542A09 /* GradientSampleView.swift */,
 				A26EADDE281ED68200542A09 /* Assets.xcassets */,
@@ -190,6 +196,7 @@
 				A26EADDD281ED68200542A09 /* ContentView.swift in Sources */,
 				A26EADE9281EE1D300542A09 /* MatchedView.swift in Sources */,
 				A26EADFA282D0B6C00542A09 /* CustomSheet.swift in Sources */,
+				A28B3AAD284904F300F012FF /* CardView.swift in Sources */,
 				A26EADEE2824C66000542A09 /* CourseView.swift in Sources */,
 				A26EAE04282FFECD00542A09 /* SheetBodyView.swift in Sources */,
 				A26EAE02282FA4A300542A09 /* ToolbarButton.swift in Sources */,
@@ -197,6 +204,7 @@
 				A26EADFE282FA10C00542A09 /* RoundedShape.swift in Sources */,
 				A26EADF32826D4D800542A09 /* GradientSampleView.swift in Sources */,
 				A26EADF02824C8BA00542A09 /* HomeView.swift in Sources */,
+				A28B3AAB2849023000F012FF /* CardsStockView.swift in Sources */,
 				A26EADDB281ED68200542A09 /* CustomTransitionApp.swift in Sources */,
 				A26EADEC2824C06F00542A09 /* CourseItem.swift in Sources */,
 			);
