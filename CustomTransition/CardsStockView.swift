@@ -23,7 +23,7 @@ struct CardsStockView: View {
         .rotationEffect(Angle(degrees: show ? 15 : 0))
         .blendMode(.hardLight)
         .offset(x: viewState.width, y: viewState.height)
-        .animation(.easeInOut(duration: 0.3))
+        .animation(.easeInOut(duration: 0.3), value: show)
 
       CardView(title: "UI Design", cardNumber: "0000 0000 0000 0000 ", name: "Certificates", limit: "07/24", background: .purple)
         .frame(width: 340.0, height: 220)
@@ -33,7 +33,7 @@ struct CardsStockView: View {
         .rotationEffect(Angle(degrees: show ? 10 : 0))
 //        .blendMode(.hardLight)
         .offset(x: viewState.width, y: viewState.height)
-        .animation(.easeInOut(duration: 0.2))
+        .animation(.easeInOut(duration: 0.2), value: show)
 
       CardView(title: "UI Design", cardNumber: "0000 0000 0000 0000 ", name: "Certificates", limit: "07/24", background: .cyan)
         .frame(width: 340.0, height: 220)
@@ -42,7 +42,7 @@ struct CardsStockView: View {
         .rotationEffect(Angle(degrees: show ? 5 : 0))
         .blendMode(.hardLight)
         .offset(x: viewState.width, y: viewState.height)
-        .animation(.spring())
+        .animation(.spring(), value: show)
         .onTapGesture {
           self.show.toggle()
         }
