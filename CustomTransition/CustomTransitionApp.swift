@@ -12,8 +12,7 @@ struct CustomTransitionApp: App {
     var body: some Scene {
         WindowGroup {
 //            HomeView()
-//          ContentView()
-          CardsStockView()
+          ContentView()
         }
     }
 }

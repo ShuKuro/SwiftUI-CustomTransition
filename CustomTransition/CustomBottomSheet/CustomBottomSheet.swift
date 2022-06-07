@@ -14,7 +14,7 @@ struct CustomBottomSheet: View {
 
     var body: some View {
       CustomSheet(currentHeight: $currentHeight, movingOffset: $movingOffset, smallHeight: 300, onDragEnd: {position in
-        // DO somethings on drag end
+        // Do somethings on drag end
       }) {
         ZStack(alignment: .top) {
           SheetBodyView(movingOffset: $movingOffset)

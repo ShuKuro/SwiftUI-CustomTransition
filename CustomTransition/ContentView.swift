@@ -16,22 +16,39 @@ struct ContentView: View {
   @State private var movingOffset: CGFloat = 0.0
 
   var body: some View {
-    ZStack {
-      LinearGradient(colors: [Color.red, Color.purple], startPoint: .topLeading, endPoint: .bottomTrailing)
-        .ignoresSafeArea()
+    NavigationView {
+      ZStack {
+        LinearGradient(colors: [Color.red, Color.purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+          .ignoresSafeArea()
 
-      VStack(spacing: 20) {
-        modalButton(material: .ultraThinMaterial)
-        modalButton(material: .thinMaterial)
-        modalButton(material: .regularMaterial)
-        modalButton(material: .thickMaterial)
-        modalButton(material: .ultraThickMaterial)
-      }
+        VStack(spacing: 20) {
+          modalButton(material: .ultraThinMaterial)
 
-      CustomBottomSheet(currentHeight: $currentHeight, movingOffset: $movingOffset)
-      
-      if showModal {
-        glassModal
+          NavigationLink(destination: {
+            CardsStockView()
+          }, label: {
+            Text("Cards")
+              .font(.body)
+              .foregroundColor(.white)
+              .frame(width: 250, height: 50)
+              .background(Color.purple)
+              .cornerRadius(20)
+          })
+
+          NavigationLink(destination: {
+            BottomSheet()
+          }, label: {
+            Text("BottomSheet")
+          })
+
+          Spacer()
+        }
+
+        CustomBottomSheet(currentHeight: $currentHeight, movingOffset: $movingOffset)
+
+        if showModal {
+          glassModal
+        }
       }
     }
   }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2409312284FB1AE00D0F196 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2409311284FB1AE00D0F196 /* BottomSheet.swift */; };
 		A26EADDB281ED68200542A09 /* CustomTransitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADDA281ED68200542A09 /* CustomTransitionApp.swift */; };
 		A26EADDD281ED68200542A09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADDC281ED68200542A09 /* ContentView.swift */; };
 		A26EADDF281ED68200542A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A26EADDE281ED68200542A09 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2409311284FB1AE00D0F196 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		A26EADD7281ED68200542A09 /* CustomTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26EADDA281ED68200542A09 /* CustomTransitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionApp.swift; sourceTree = "<group>"; };
 		A26EADDC281ED68200542A09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2409310284FB0B300D0F196 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				A28B3AAA2849023000F012FF /* CardsStockView.swift */,
+				A28B3AAC284904F300F012FF /* CardView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
 		A26EADCE281ED68200542A09 = {
 			isa = PBXGroup;
 			children = (
@@ -84,8 +95,8 @@
 				A26EADED2824C66000542A09 /* CourseView.swift */,
 				A26EADE8281EE1D300542A09 /* MatchedView.swift */,
 				A26EADDC281ED68200542A09 /* ContentView.swift */,
-				A28B3AAA2849023000F012FF /* CardsStockView.swift */,
-				A28B3AAC284904F300F012FF /* CardView.swift */,
+				A2409311284FB1AE00D0F196 /* BottomSheet.swift */,
+				A2409310284FB0B300D0F196 /* Cards */,
 				A26EADFB282F7BC800542A09 /* CustomBottomSheet */,
 				A26EADF22826D4D800542A09 /* GradientSampleView.swift */,
 				A26EADDE281ED68200542A09 /* Assets.xcassets */,
@@ -202,6 +213,7 @@
 				A26EAE02282FA4A300542A09 /* ToolbarButton.swift in Sources */,
 				A26EADF8282D0B0A00542A09 /* CustomBottomSheet.swift in Sources */,
 				A26EADFE282FA10C00542A09 /* RoundedShape.swift in Sources */,
+				A2409312284FB1AE00D0F196 /* BottomSheet.swift in Sources */,
 				A26EADF32826D4D800542A09 /* GradientSampleView.swift in Sources */,
 				A26EADF02824C8BA00542A09 /* HomeView.swift in Sources */,
 				A28B3AAB2849023000F012FF /* CardsStockView.swift in Sources */,
