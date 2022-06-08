@@ -24,6 +24,7 @@ struct CardsStockView: View {
         .blendMode(.hardLight)
         .offset(x: viewState.width, y: viewState.height)
         .animation(.easeInOut(duration: 0.3), value: show)
+        .animation(.easeInOut(duration: 0.3), value: viewState)
 
       CardView(title: "UI Design", cardNumber: "0000 0000 0000 0000 ", name: "Certificates", limit: "07/24", background: .purple)
         .frame(width: 340.0, height: 220)
@@ -34,6 +35,7 @@ struct CardsStockView: View {
 //        .blendMode(.hardLight)
         .offset(x: viewState.width, y: viewState.height)
         .animation(.easeInOut(duration: 0.2), value: show)
+        .animation(.easeInOut(duration: 0.2), value: viewState)
 
       CardView(title: "UI Design", cardNumber: "0000 0000 0000 0000 ", name: "Certificates", limit: "07/24", background: .cyan)
         .frame(width: 340.0, height: 220)
@@ -43,6 +45,7 @@ struct CardsStockView: View {
         .blendMode(.hardLight)
         .offset(x: viewState.width, y: viewState.height)
         .animation(.spring(), value: show)
+        .animation(.spring(), value: viewState)
         .onTapGesture {
           self.show.toggle()
         }
