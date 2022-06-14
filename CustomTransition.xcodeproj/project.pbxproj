@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A2409312284FB1AE00D0F196 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2409311284FB1AE00D0F196 /* BottomSheet.swift */; };
+		A25190322858D5A3004946B6 /* BottomSheetContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25190312858D5A3004946B6 /* BottomSheetContentView.swift */; };
 		A26EADDB281ED68200542A09 /* CustomTransitionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADDA281ED68200542A09 /* CustomTransitionApp.swift */; };
 		A26EADDD281ED68200542A09 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26EADDC281ED68200542A09 /* ContentView.swift */; };
 		A26EADDF281ED68200542A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A26EADDE281ED68200542A09 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		A2409311284FB1AE00D0F196 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		A25190312858D5A3004946B6 /* BottomSheetContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetContentView.swift; sourceTree = "<group>"; };
 		A26EADD7281ED68200542A09 /* CustomTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26EADDA281ED68200542A09 /* CustomTransitionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransitionApp.swift; sourceTree = "<group>"; };
 		A26EADDC281ED68200542A09 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,15 @@
 			path = Cards;
 			sourceTree = "<group>";
 		};
+		A25190302858D593004946B6 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				A2409311284FB1AE00D0F196 /* BottomSheet.swift */,
+				A25190312858D5A3004946B6 /* BottomSheetContentView.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
 		A26EADCE281ED68200542A09 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +106,7 @@
 				A26EADED2824C66000542A09 /* CourseView.swift */,
 				A26EADE8281EE1D300542A09 /* MatchedView.swift */,
 				A26EADDC281ED68200542A09 /* ContentView.swift */,
-				A2409311284FB1AE00D0F196 /* BottomSheet.swift */,
+				A25190302858D593004946B6 /* BottomSheet */,
 				A2409310284FB0B300D0F196 /* Cards */,
 				A26EADFB282F7BC800542A09 /* CustomBottomSheet */,
 				A26EADF22826D4D800542A09 /* GradientSampleView.swift */,
@@ -205,6 +216,7 @@
 			files = (
 				A26EAE00282FA15900542A09 /* ToolbarView.swift in Sources */,
 				A26EADDD281ED68200542A09 /* ContentView.swift in Sources */,
+				A25190322858D5A3004946B6 /* BottomSheetContentView.swift in Sources */,
 				A26EADE9281EE1D300542A09 /* MatchedView.swift in Sources */,
 				A26EADFA282D0B6C00542A09 /* CustomSheet.swift in Sources */,
 				A28B3AAD284904F300F012FF /* CardView.swift in Sources */,
