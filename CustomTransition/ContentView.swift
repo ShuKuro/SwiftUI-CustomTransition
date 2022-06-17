@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   @State var showModal = false
+  @State var bottomSheetShow = false
   @Namespace var namespace
   @State var material: Material = .ultraThinMaterial
 
@@ -35,10 +36,17 @@ struct ContentView: View {
               .cornerRadius(20)
           })
 
-          NavigationLink(destination: {
-            BottomSheet()
+          Button(action: {
+            withAnimation {
+              bottomSheetShow.toggle()
+            }
           }, label: {
-            Text("BottomSheet")
+            Text("Bottom Sheet")
+              .font(.body)
+              .foregroundColor(.white)
+              .frame(width: 250, height: 50)
+              .background(Color.mint)
+              .cornerRadius(20)
           })
 
           Spacer()
@@ -48,6 +56,15 @@ struct ContentView: View {
 
         if showModal {
           glassModal
+        }
+
+        if bottomSheetShow {
+          Color.black.opacity(0.3)
+            .ignoresSafeArea()
+          
+          BottomSheet(show: $bottomSheetShow)
+            .transition(.move(edge: .bottom))
+            .zIndex(1)
         }
       }
     }

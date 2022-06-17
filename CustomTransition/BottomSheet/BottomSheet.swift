@@ -10,8 +10,31 @@ import SwiftUI
 struct BottomSheet: View {
   @State var translation: CGSize = .zero
   @State var offsetY: CGFloat = 0
+  @Binding var show: Bool
 
   var body: some View {
+    ZStack {
+      content
+
+      Button {
+        withAnimation(.easeOut) {
+          show.toggle()
+        }
+      } label: {
+        Image(systemName: "xmark")
+          .font(.body.bold())
+          .foregroundColor(.white)
+          .padding(9)
+          .background(Color.purple)
+          .cornerRadius(30)
+      }
+      .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+      .padding()
+      .opacity(show ? 1 : 0)
+    }
+  }
+
+  var content: some View {
     GeometryReader { proxy in
       VStack {
         BottomSheetContentView()
@@ -32,8 +55,10 @@ struct BottomSheet: View {
 
               if snap > quarter && snap < quarter * 3 {
                 offsetY = quarter * 2
-              } else if snap > quarter * 3 {
+              } else if snap > quarter * 3 && snap < quarter * 4 {
                 offsetY = quarter * 3 + 100
+              } else if snap > quarter * 4 {
+                show.toggle()
               } else {
                 offsetY = 0
               }
@@ -49,7 +74,7 @@ struct BottomSheet: View {
 
 struct BottomSheet_Previews: PreviewProvider {
   static var previews: some View {
-    BottomSheet()
+    BottomSheet(show: .constant(true))
       .background(.blue)
   }
 }
